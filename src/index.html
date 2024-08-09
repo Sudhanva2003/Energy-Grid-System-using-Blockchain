@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Grid Blockchain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+</head>
+<body>
+    <h1>Energy Grid Blockchain Interface</h1>
+    <button onclick="loadWeb3()">Connect Wallet</button>
+    <h2>Register as Producer</h2>
+    <button onclick="registerAsProducer()">Register Producer</button>
+    <h2>Register as Consumer</h2>
+    <button onclick="registerAsConsumer()">Register Consumer</button>
+    <h2>Buy Tokens</h2>
+    <input id="ethAmount" type="number" placeholder="Amount in ETH">
+    <button onclick="buyTokens()">Buy Tokens</button>
+    <h2>Buy Energy</h2>
+    <input id="producerAddressEnergy" type="text" placeholder="Producer Address">
+    <input id="energyAmount" type="number" placeholder="Amount of Energy">
+    <button onclick="buyEnergy()">Buy Energy</button>
+    <button onclick="checkContractBalance()">Check Contract Balance</button>
+    <input id="producerAddressRelease" type="text" placeholder="Enter producer's address">
+    <button onclick="releaseTokensToProducer()">Release Tokens to Producer</button>
+    <h2>Token to Ether Conversion Rate</h2>
+    <div id="rateDisplay"></div>
+    <button onclick="displayTokenToEtherRate()">Show Rate</button>
+    <h2>Register as Retailer</h2>
+    <button onclick="registerAsRetailer()">Register Retailer</button>
+    <h2>Buy Energy from Retailer</h2>
+    <input id="retailerAddress" type="text" placeholder="Retailer Address">
+    <input id="energyAmountRetailer" type="number" placeholder="Energy Amount (from Retailer)">
+    <button onclick="buyEnergyFromRetailer()">Buy Energy from Retailer</button>
+
+    <h2>Retailer Pays Producer</h2>
+    <input id="producerAddressPay" type="text" placeholder="Producer Address">
+    <input id="tokenAmount" type="number" placeholder="Token Amount">
+    <button onclick="retailerPaysProducer()">Retailer Pays Producer</button>
+
+    <h2>Buy Energy from Producer</h2>
+    <input id="producerAddressBuy" type="text" placeholder="Producer Address">
+    <input id="energyAmountProducer" type="number" placeholder="Energy Amount (units)">
+    <button onclick="buyEnergyFromProducer(document.getElementById('producerAddressBuy').value, document.getElementById('energyAmountProducer').value)">Buy Energy</button>
+    <h2>Check Consumed Energy</h2>
+    <button onclick="checkConsumedEnergy()">Check Energy</button>
+    <!-- <h2>Pay for Consumed Energy</h2>
+    <input id="producerAddressToPay" type="text" placeholder="Producer Address to Pay">
+    <input id="energyAmountToPay" type="number" placeholder="Amount of Energy to Pay For">
+    <button onclick="payForConsumedEnergy()">Pay Now</button> -->
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
